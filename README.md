@@ -3,7 +3,10 @@
 These are a set of development tools that we use for WordPress development in our plugins and themes.
 
 The tools consists of:
-- PHPStan and WordPress rules - PHPCS ruleset - PHPCS Fixer
+
+- PHPStan and WordPress rules
+- PHPCS ruleset
+- PHPCS Fixer
 
 ## Installation
 
@@ -18,7 +21,14 @@ Add the following scripts to your composer.json:
 ```json
 {
   "scripts": {
-    "test"
+	"lint": "php-cs-fixer fix -v",
+	"test:cs": "phpcs-wp",
+	"test:types": "phpstan analyse --ansi --memory-limit=-1",
+	"test:lint": "php-cs-fixer fix -v --dry-run",
+	"test": [
+	  "@test:lint",
+	  "@test:types"
+	]
   }
 }
 ```
