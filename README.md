@@ -32,3 +32,11 @@ Add the following scripts to your composer.json:
   }
 }
 ```
+
+## Configure PHP Storm
+
+### PHPCS Inspections
+
+1. go to `Project Settings > PHP > Code Sniffer` and set your phpcs executable. You should use installed in bin-dir.
+2. go to Project `Settings > Inspections > PHP > PHP Code Sniffer validation` and set Custom coding standard.
+3. use path selection ("...") to find the ruleset at `vendor/bernskioldmedia/bm-wp-devtools/phpcs/ruleset.xml`
