@@ -9,7 +9,7 @@
 	"testing"
   ],
   "bin": [
-	"phpcs-wp"
+	"bin/phpcs-wp"
   ],
   "license": "MIT",
   "authors": [
